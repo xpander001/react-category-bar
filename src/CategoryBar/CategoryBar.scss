@@ -17,15 +17,34 @@
   border-bottom: 2px solid white;
   -webkit-font-smoothing: subpixel-antialiased;
   height: 34px;
+  transition: color linear .2s;
   &:hover {
     color: grey;
+    transition: all ease .2s;
+  }
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    left: 50%;
   }
 }
 
 .CategoryElementSelected {
   color: blue;
-  border-bottom: 2px solid currentColor;
+  // border-bottom: 2px solid currentColor;
   font-weight: bold;
+  &:after {
+    transition: all linear .2s;
+    width: 100%;
+    left: 0;
+
+  }
 }
 
 // BEM for CategoryBar
@@ -45,15 +64,14 @@
     padding: 0px;
     height: 34px;
     overflow: hidden;
+  }
 
-    &__Category {
-      @extend .CategoryElement;
+  &__Category {
+    @extend .CategoryElement;
 
-      &--Selected {
-        @extend .CategoryElementSelected;
-      }
+    &--Selected {
+      @extend .CategoryElementSelected;
     }
-
   }
 
 }

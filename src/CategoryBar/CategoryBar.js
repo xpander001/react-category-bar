@@ -45,8 +45,8 @@ class CategoryBar extends Component {
             this.props.categories.map((category) => 
               <li className={
                 this.state.selectedId === category.id ? 
-                "CategoryBar__List__Category CategoryBar__List__Category--Selected" :
-                "CategoryBar__List__Category"}
+                "CategoryBar__Category CategoryBar__Category--Selected" :
+                "CategoryBar__Category"}
                 onClick={() => {
                   this.selectCategory(category);
                 }}
