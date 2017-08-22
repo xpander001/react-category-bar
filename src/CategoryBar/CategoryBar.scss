@@ -17,10 +17,11 @@
   border-bottom: 2px solid white;
   -webkit-font-smoothing: subpixel-antialiased;
   height: 34px;
-  transition: color linear .2s;
+  transition: color linear .1s;
+  
   &:hover {
     color: grey;
-    transition: all ease .2s;
+    transition: all ease .1s;
   }
 
   &:after {
@@ -37,13 +38,14 @@
 
 .CategoryElementSelected {
   color: blue;
-  // border-bottom: 2px solid currentColor;
   font-weight: bold;
+  &:hover {
+    color: blue;
+  }
   &:after {
-    transition: all linear .2s;
+    transition: all linear .1s;
     width: 100%;
     left: 0;
-
   }
 }
 
